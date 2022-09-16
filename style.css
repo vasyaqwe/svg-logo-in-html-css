@@ -1,0 +1,225 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+
+ul {
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+ul {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]),
+a {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+input {
+    width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: .86;
+}
+
+.logo-img {
+    position: relative;
+    width: 150px;
+    aspect-ratio: 1;
+}
+
+.line-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 110px;
+    width: 10px;
+
+}
+
+.line-vertical-one {
+    left: 0;
+    background-color: #0855f4;
+}
+
+.line-vertical-two {
+    left: 20px;
+    background-color: #4495fa;
+}
+
+.line-vertical-three {
+    left: 40px;
+    background-color: #25cde8;
+}
+
+.line-horizontal {
+    position: absolute;
+    left: -10px;
+    height: 10px;
+    width: 110px;
+}
+
+.line-horizontal-one {
+    bottom: 30px;
+    background-color: #0855f4;
+}
+
+.line-horizontal-one::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: #003cd2;
+}
+
+.line-horizontal-one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: #0000d1;
+}
+
+.line-horizontal-one .square-three {
+    background-color: #003cd2;
+}
+
+.square-three {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 10px;
+    aspect-ratio: 1;
+}
+
+.line-horizontal-two {
+    bottom: 50px;
+    background-color: #4495fa;
+}
+
+.line-horizontal-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: #003cd2;
+}
+
+.line-horizontal-two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: #0855f4;
+}
+
+.line-horizontal-two .square-three {
+    background-color: #0078e3;
+}
+
+.line-horizontal-three {
+    bottom: 70px;
+    background-color: #25cde8;
+}
+
+.line-horizontal-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: #003cd2;
+}
+
+.line-horizontal-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: #0078e3;
+}
+
+.line-horizontal-three .square-three {
+    background-color: #00a4d2;
+}
